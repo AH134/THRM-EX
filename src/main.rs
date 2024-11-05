@@ -6,7 +6,7 @@ use windows::{
 	core::*, Win32::Foundation::*, Win32::Graphics::Gdi::*, Win32::UI::WindowsAndMessaging::*
 };
 
-const TITLE: PCWSTR = w!("명일방주");
+const TITLE: PCWSTR = w!("Arknights");
 
 static mut KBDHOOK: HHOOK = HHOOK(0);
 static mut MSEHOOK: HHOOK = HHOOK(0);
@@ -66,18 +66,18 @@ impl ::std::default::Default for Config {
 			message: String::from("Find the HEX value of your key in the site below and replace it with a \"decimal\" value."),
 			site_link: String::from("https://learn.microsoft.com/ko-kr/windows/win32/inputdev/virtual-key-codes"),
 
-			game_pause: 0x20, // VK_SPACE
-			game_speed: 0x43, // VK_KEY_C
+			game_pause: 0x52, // VK_KEY_R
+			game_speed: 0x20, // VK_SPACE_KEY
 
 			operator_retreat: 0x51, // VK_KEY_Q
-			operator_skill: 0x45, // VK_KEY_E
-			operator_deselect: 0x46, // VK_KEY_F
+			operator_skill: 0x57, // VK_KEY_W
+			operator_deselect: 0x45, // VK_KEY_E
 
-			position_up: 0x57, // VK_KEY_W
-			position_down: 0x53, // VK_KEY_S
-			position_left: 0x41, // VK_KEY_A
-			position_right: 0x44, // VK_KEY_D
-
+			position_up: 0x53, // VK_KEY_S
+			position_down: 0x58, // VK_KEY_X
+			position_left: 0x5A, // VK_KEY_Z
+			position_right: 0x43, // VK_KEY_C
+      
 			macro_pause: 0x72, // VK_F3
 			macro_quit: 0x73 // VK_F4
 		}
